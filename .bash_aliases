@@ -2,7 +2,7 @@ SRC=/mnt/c/Users/swima/source/
 OMSCS=/mnt/c/Users/swima/source/OMSCS
 
 cd $SRC
-export DISPLAY=0.0
+export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0.0
 
 alias gcane="git commit --amend --no-edit"
 alias gs="git status"
