@@ -1,6 +1,3 @@
-import numpy as np
-
-
 ShackUpgrades = {
     'paint'      : (289000  , 10),
     # 'furniture'  : (345600  , 20),
