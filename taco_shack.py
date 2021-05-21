@@ -1,57 +1,83 @@
 import numpy as np
 
 
-def Upgrades():
-    return {
-        'paint'      : (90250  , 10),
-        'furniture'  : (153600 , 20),
-        #'appliances' : (1153200, 20 * 3 * 10),
-        'bathrooms'  : (204800 , 25),
-        'billboard'  : (289000 , 35),
-        #'tipjar'     : (648000 , 50 * 12),
-        'flowers'    : (40000  , 5),
-        'ornaments'  : (80000  , 10),
-        'lights'     : (256000 , 30),
-        #'mural'      : (540000 , 100),
-        'statue'     : (4500000, 400),
-        'apprentice' : (81000  , 10),
-        'cook'       : (153600 , 20),
-        'sous'       : (307200 , 40),
-        'head'       : (512000 , 65),
-        'executive'  : (1280000, 150),
-        'advertiser' : (157500 , 20),
-        'greeter'    : (204800 , 25),
-        'newspaper'  : (78750  , 10),
-        'radio'      : (166400 , 20),
-        'email'      : (225000 , 30),
-        'internet'   : (392000 , 50),
-        'tv'         : (1237500, 160),
-        'blimp'      : (2250000, 200),
-        'register'   : (405000 , 50),
-        'assistant'  : (810000 , 100),
-        'driver'     : (2025000, 250),
-        # 'kitchen'    : (3600000, 400),
-        'engine'     : (9000000, 1000)
-    }
+ShackUpgrades = {
+    'paint'      : (289000  , 10),
+    # 'furniture'  : (345600  , 20),
+    # 'bathrooms'  : (720000  , 25),
+    # 'billboard'  : (576000  , 35),
+    # 'appliances' : (1153200 , 20 * 3 * 10),
+    # 'tipjar'     : (648000  , 50 * 12),
+
+    'register'   : (1445000 , 50),
+    # 'assistant'  : (810000  , 100),
+    # 'driver'     : (2025000 , 250),
+    # 'kitchen'    : (3600000 , 400),
+    # 'engine'     : (9000000 , 1000),
+
+    'flowers'    : (144400  , 5),
+    # 'ornaments'  : (80000   , 10),
+    'lights'     : (900000  , 30),
+    # 'mural'      : (540000  , 100),
+    # 'statue'     : (4500000 , 400),
+
+    'apprentice' : (289000  , 10),
+    'cook'       : (576600  , 20),
+    'advertiser' : (588700  , 20),
+    'greeter'    : (720000  , 25),
+    'sous'       : (1153200 , 40),
+    # 'head'       : (512000  , 65),
+    'executive'  : (4500000 , 150),
+
+    'newspaper'  : (294350  , 10),
+    'radio'      : (585000  , 20),
+    'email'      : (900000  , 30),
+    'internet'   : (1458000 , 50),
+    # 'tv'         : (1237500 , 160),
+    # 'blimp'      : (2250000 , 200),
+}
+
+BeachUpgrades = {
+    'paint'      : (169000   , 10),
+    'furniture'  : (345600   , 20),
+    'bathrooms'  : (423200   , 25),
+    'billboard'  : (576000   , 35),
+    # 'appliances' : (1153200  , 20 * 3 * 10),
+    # 'tipjar'     : (648000   , 50 * 12),
+
+    'decals'     : (845000   , 50),
+    'wheels'     : (1666000  , 100),
+    'mixers'     : (4225000  , 250),
+    # 'server'     : (0000000  , 400),
+    'freezer'    : (12000000 , 750),
+
+    'shells'     : (84100    , 5),
+    'umbrella'   : (169000   , 10),
+    'leis'       : (486000   , 30),
+    # 'tanks'      : (540000   , 125),
+    'fountain'   : (13500000 , 500),
+
+    'apprentice' : (169000   , 10),
+    'cook'       : (345600   , 20),
+    'advertiser' : (338800   , 20),
+    'greeter'    : (423200   , 25),
+    'sous'       : (691200   , 40),
+    'head'       : (1058000  , 65),
+    'executive'  : (2420000  , 150),
+
+    'newspaper'  : (169400   , 10),
+    'radio'      : (343850   , 20),
+    'email'      : (484000   , 30),
+    'internet'   : (800000   , 50),
+    'tv'         : (1408000  , 160),
+    'blimp'      : (4000000  , 200),
+}
+
 
 def best(upgrades):
     return max(upgrades, key=lambda x: upgrades[x][1] / upgrades[x][0])
 
 
-def Shop():
-    shop = {
-        'flipper' : (2000 , 500 , 8),
-        'karaoke' : (10000, 2500, 6),
-        'music'   : (16000, 6000, 4),
-        'airplane': (65000, 3500, 24),
-        'chef'    : (3000 , 1000, 4)
-    }
-
-    print(sum(shop[x][1] * shop[x][2] - shop[x][0] for x in shop))
-    return ' '.join(reversed(sorted(shop, key=lambda x: shop[x][1] - shop[x][0] / shop[x][2])))
-
-
 if __name__ == '__main__':
-    ups = Upgrades()
-    print(best(ups))
-    print(Shop())
+    print(best(ShackUpgrades))
+    print(best(BeachUpgrades))
