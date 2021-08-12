@@ -58,13 +58,13 @@ BeachUpgrades = {
     'umbrella'   : (272250   , 10),
     'leis'       : (864000   , 30),
     # 'tanks'      : (540000   , 125),
-    'fountain'   : (13500000 , 500),
+    # 'fountain'   : (13500000 , 500),
 
     'apprentice' : (272250   , 10),
-    'cook'       : (540000   , 20),
+    'cook'       : (576600   , 20),
     'advertiser' : (548800   , 20),
     'greeter'    : (720000   , 25),
-    'sous'       : (1080000  , 40),
+    'sous'       : (1153200  , 40),
     'head'       : (1922000  , 65),
     'executive'  : (4205000  , 150),
 
@@ -77,12 +77,12 @@ BeachUpgrades = {
 }
 
 CityUpgrades = {
-    'paint'      : (36000   , 10),
-    'furniture'  : (72600   , 20),
-    'bathrooms'  : (96800   , 25),
-    'billboard'  : (121000  , 35),
+    'paint'      : (64000   , 10),
+    'furniture'  : (135000  , 20),
+    'bathrooms'  : (156800  , 25),
+    'billboard'  : (225000  , 35),
     'appliances' : (97200   , 20 * work_rate),
-    'tipjar'     : (98000   , 50 * tip_rate),
+    'tipjar'     : (180500  , 50 * tip_rate),
 
     # 'decals'     : (1445000  , 50),
     # 'wheels'     : (1912500  , 100),
@@ -90,26 +90,35 @@ CityUpgrades = {
     # 'server'     : (0000000  , 400),
     # 'freezer'    : (27000000 , 750),
 
-    'banner'     : (18150   , 5),
-    'sign'       : (40500   , 10),
+    'banner'     : (33750   , 5),
+    'sign'       : (60500   , 10),
     'glass'      : (202500  , 30),
-    'artwork'    : (900000  , 150),
+    'artwork'    : (1600000 , 150),
     'chandelier' : (5000000 , 500),
 
-    'apprentice' : (36000   , 10),
-    'cook'       : (72600   , 20),
-    'advertiser' : (70000   , 20),
-    'greeter'    : (96800   , 25),
-    'sous'       : (145200  , 40),
-    'head'       : (242000  , 65),
-    'executive'  : (500000  , 150),
+    'apprentice' : (64000   , 10),
+    'cook'       : (135000  , 20),
+    'advertiser' : (137200  , 20),
+    'greeter'    : (156800  , 25),
+    'sous'       : (270000  , 40),
+    'head'       : (392000  , 65),
+    'executive'  : (980000  , 150),
 
-    'newspaper'  : (35000   , 10),
-    'radio'      : (65000   , 20),
-    'email'      : (100000  , 30),
-    'internet'   : (162000  , 50),
-    # 'tv'         : (2200000  , 160),
-    'blimp'      : (1000000 , 200),
+    'newspaper'  : (68600   , 10),
+    'radio'      : (127400  , 20),
+    'email'      : (196000  , 30),
+    'internet'   : (338000  , 50),
+    # 'tv'         : (550000  , 160),
+    'blimp'      : (2250000 , 200),
+}
+
+FranchiseUpgrades = {
+    'drivethru' : (100000 , 1000),
+    'customer'  : (22500  , .1 * tip_rate * 14000),
+    'food'      : (22500  , .1 * work_rate * 14000),
+    'overtime'  : (36000  , .1 * work_rate * 14000 * 2),
+    'marketing' : (45000  , 300),
+    'hq'        : (40000  , 500),
 }
 
 
@@ -121,3 +130,4 @@ if __name__ == '__main__':
     # print(best(ShackUpgrades))
     print('beach', best(BeachUpgrades))
     print('city', best(CityUpgrades))
+    print('f', best(FranchiseUpgrades))
