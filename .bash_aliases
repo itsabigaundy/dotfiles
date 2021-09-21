@@ -8,3 +8,9 @@ alias srcbashrc="source ~/.bashrc"
 alias vimaliases="vim ~/.bash_aliases"
 alias vimvimrc="vim ~/.vimrc"
 alias vimgitconfig="vim ~/.gitconfig"
+
+alias lsvenvs="ls ~/.venvs"
+
+srcvenv () {
+    source ~/.venvs/$1/bin/activate
+}
