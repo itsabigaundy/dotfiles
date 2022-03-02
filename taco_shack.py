@@ -15,13 +15,6 @@ BeachUpgrades = {
 }
 
 CityUpgrades = {
-    # 'paint'      : (506250   , 10),
-    # 'furniture'  : (960000   , 20),
-    'bathrooms'  : (1280000  , 25),
-    # 'billboard'  : (1600000  , 35),
-    # 'appliances' : (1080000  , 20 * work_rate),
-    # 'tipjar'     : (612500   , 50 * tip_rate),
-
     'buns'       : (2707500  , 50),
     'condiments' : (5290000  , 100),
     'beverages'  : (14450000 , 275),
@@ -29,7 +22,7 @@ CityUpgrades = {
     'grill'      : (49000000 , 800),
 
     'banner'     : (264600   , 5),
-    'sign'       : (512000   , 10),
+    'sign'       : (544500   , 10),
     'glass'      : (1562500  , 30),
     # 'artwork'    : (6400000  , 150),
     'chandelier' : (45000000 , 500),
@@ -37,14 +30,14 @@ CityUpgrades = {
     # 'apprentice' : (506250   , 10),
     'cook'       : (1058400  , 20),
     'advertiser' : (1064700  , 20),
-    'greeter'    : (1280000  , 25),
+    'greeter'    : (1344800  , 25),
     'sous'       : (2116800  , 40),
     # 'head'       : (3200000  , 65),
-    'executive'  : (7605000  , 150),
+    'executive'  : (8000000  , 150),
 
     'newspaper'  : (532350   , 10),
     'radio'      : (1040000  , 20),
-    'email'      : (1521000  , 30),
+    'email'      : (1600000  , 30),
     'internet'   : (2592000  , 50),
     # 'tv'         : (4950000  , 160),
     # 'blimp'      : (6250000  , 200),
